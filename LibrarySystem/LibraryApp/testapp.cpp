@@ -60,9 +60,9 @@ int main() {
     printArray(mixed, "Before sort (MIXED input)");
 
     // --- 4. Call sort function on all arrays ---
-    sortBooksByISBN(asc);
-    sortBooksByISBN(desc);
-    sortBooksByISBN(mixed);
+    sortBooksByISBN(asc);          // ascending
+    sortBooksByISBNDesc(desc);     // descending  <-- esta é a mudança importante
+    sortBooksByISBN(mixed);        // ascending
 
     printArray(asc, "After sort (ASC input)");
     printArray(desc, "After sort (DESC input)");
