@@ -21,6 +21,7 @@
   <ItemGroup>
     <ClInclude Include="Book.h" />
     <ClInclude Include="Sort.h" />
+    <ClInclude Include="student.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Book.cpp" />
