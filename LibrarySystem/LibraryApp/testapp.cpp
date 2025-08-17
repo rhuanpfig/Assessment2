@@ -3,7 +3,7 @@
 #include "student.h"
 
 // Print helper
-static void printArray(const std::vector<Book>& arr, const char* label) {
+void printArray(const std::vector<Book>& arr, const char* label) {
     std::cout << "\n=== " << label << " ===\n";
     for (const auto& b : arr) {
         std::cout << b.getISBN() << " | "
