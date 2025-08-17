@@ -2,7 +2,7 @@
 #include <vector>
 #include "student.h"
 
-// Print helper
+// Print helper (fica aqui caso queiras usar em outras seções)
 void printArray(const std::vector<Book>& arr, const char* label) {
     std::cout << "\n=== " << label << " ===\n";
     for (const auto& b : arr) {
@@ -59,18 +59,10 @@ int main() {
         Book("The C Programming Language", "Kernighan & Ritchie", "9780131103627", "2024-01-01")
     };
 
-    printArray(asc, "Before sort (ASC input)");
-    printArray(desc, "Before sort (DESC input)");
-    printArray(mixed, "Before sort (MIXED input)");
-
-    // 4) Call sort functions
-    sortBooksByISBN(asc);          // ascending
-    sortBooksByISBNDesc(desc);     // descending
-    sortBooksByISBN(mixed);        // ascending
-
-    printArray(asc, "After sort (ASC input)");
-    printArray(desc, "After sort (DESC input)");
-    printArray(mixed, "After sort (MIXED input)");
+    // 4) Call sort functions (conforme o enunciado)
+    sortBooksByISBN(asc);      // ascending
+    sortBooksByISBNDesc(desc); // descending
+    sortBooksByISBN(mixed);    // ascending
 
     // 5) Borrow/Return test
     std::cout << "\n=== Borrow/Return test ===\n";
