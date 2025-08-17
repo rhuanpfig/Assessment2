@@ -1,12 +1,10 @@
 #include <iostream>
 #include <vector>
-#include "Book.h"
-#include "Sort.h"
 #include "student.h"
 
 
-// Helper function to print book arrays in a simple table format
-static void printArray(const std::vector<Book>& arr, const char* label) {
+// Helper: print book array as a tiny table
+void printArray(const std::vector<Book>& arr, const char* label) {
     std::cout << "\n=== " << label << " ===\n";
     for (const auto& b : arr) {
         std::cout << b.getISBN() << " | "
