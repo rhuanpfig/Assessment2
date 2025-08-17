@@ -59,7 +59,7 @@ int main() {
         Book("The C Programming Language", "Kernighan & Ritchie", "9780131103627", "2024-01-01")
     };
 
-    // 4) Call sort functions (conforme o enunciado)
+    // 4) sort functions
     sortBooksByISBN(asc);      // ascending
     sortBooksByISBNDesc(desc); // descending
     sortBooksByISBN(mixed);    // ascending
