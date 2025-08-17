@@ -1,6 +1,7 @@
 #include <iostream>
 #include <vector>
 #include "student.h"
+#include "tests.h"
 
 // Print helper (fica aqui caso queiras usar em outras seções)
 void printArray(const std::vector<Book>& arr, const char* label) {
@@ -14,6 +15,7 @@ void printArray(const std::vector<Book>& arr, const char* label) {
 }
 
 int main() {
+        runSimpleTests();   // opcional
     using std::cout;
 
     // 1) Valid book initialization

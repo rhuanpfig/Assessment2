@@ -1,30 +1,37 @@
-﻿#include "Student.h"
+﻿#include "student.h"   // puxa Book.h e Sort.h
 #include <iostream>
 using namespace std;
 
-int main() {
-    cout << "=== Running Test Cases for Student Class ===" << endl;
+void runSimpleTests() {
+    cout << "\n=== Running Simple Test Cases ===\n";
 
-    // ✅ Test case 1: Valid book data
-    cout << "\n[TEST 1] Valid Book Data" << endl;
-    Student validBook("C++ Basics", "John Smith", 12345, true, "2023-01-01");
-    validBook.display();
+    // ✅ Válido (ordem correta: title, author, isbn, date, availability)
+    cout << "\n[TEST 1] Valid book\n";
+    Book b1("C++ Basics", "John Smith", "1001", "2023-01-01", true);
+    b1.displayBookDetails();
 
-    // ❌ Test case 2: Invalid ISBN (negative number)
-    cout << "\n[TEST 2] Invalid ISBN" << endl;
-    Student invalidISBN("Data Structures", "Jane Doe", -999, false, "2023-05-10");
-    invalidISBN.display();
+    // ❌ ISBN inválido
+    cout << "\n[TEST 2] Invalid ISBN\n";
+    try {
+        Book badIsbn("Data Structures", "Jane Doe", "XX", "2023-05-10", false);
+    }
+    catch (const std::exception& e) {
+        cout << "Caught: " << e.what() << "\n";
+    }
 
-    // ❌ Test case 3: Empty fields
-    cout << "\n[TEST 3] Empty Fields" << endl;
-    Student emptyBook("", "", 0, false, "");
-    emptyBook.display();
+    // ❌ Campos vazios
+    cout << "\n[TEST 3] Empty fields\n";
+    try {
+        Book empty("", "", "1002", "", false);
+    }
+    catch (const std::exception& e) {
+        cout << "Caught: " << e.what() << "\n";
+    }
 
-    // ✅ Test case 4: Another valid entry
-    cout << "\n[TEST 4] Another Valid Book" << endl;
-    Student anotherBook("Algorithms", "Alan Turing", 67890, true, "2024-03-15");
-    anotherBook.display();
+    // ✅ Outro válido
+    cout << "\n[TEST 4] Another valid book\n";
+    Book b2("Algorithms", "Alan Turing", "1003", "2024-03-15", true);
+    b2.displayBookDetails();
 
-    cout << "\n=== Test Cases Completed ===" << endl;
-    return 0;
+    cout << "\n=== Tests Completed ===\n";
 }
