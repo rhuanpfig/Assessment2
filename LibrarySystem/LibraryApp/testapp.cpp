@@ -2,6 +2,8 @@
 #include <vector>
 #include "Book.h"
 #include "Sort.h"
+#include "student.h"
+
 
 // Helper function to print book arrays in a simple table format
 static void printArray(const std::vector<Book>& arr, const char* label) {
