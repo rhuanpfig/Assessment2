@@ -38,7 +38,7 @@ int main() {
     catch (const std::exception& e) { cout << "bad3 failed: " << e.what() << "\n"; }
 
     // 3) Arrays for sorting (ASC/DESC/MIXED by ISBN)
-    // Note: ASC input is already in ascending ISBN order
+// Note: ASC input is already in ascending ISBN order
     std::vector<Book> asc = {
         Book("The C Programming Language", "Kernighan & Ritchie", "9780131103627", "2024-01-01"),
         Book("Design Patterns", "Gamma et al.", "9780201633610", "2024-01-01"),
@@ -59,10 +59,23 @@ int main() {
         Book("The C Programming Language", "Kernighan & Ritchie", "9780131103627", "2024-01-01")
     };
 
-    // 4) sort functions
-    sortBooksByISBN(asc);      // ascending
-    sortBooksByISBNDesc(desc); // descending
-    sortBooksByISBN(mixed);    // ascending
+    // (3) Evidence: BEFORE sorting
+    printArray(asc, "Before sort (ASC input)");
+    printArray(desc, "Before sort (DESC input)");
+    printArray(mixed, "Before sort (MIXED input)");
+
+    // (4) Call sort function on all three arrays
+    sortBooksByISBN(asc);          // ascending
+    sortBooksByISBNDesc(desc);     // descending
+    sortBooksByISBN(mixed);        // ascending
+
+    // Evidence: AFTER sorting
+    printArray(asc, "After sort (ASC input)");
+    printArray(desc, "After sort (DESC input)");
+    printArray(mixed, "After sort (MIXED input)");
+
+
+
 
     // 5) Borrow/Return test
     std::cout << "\n=== Borrow/Return test ===\n";
