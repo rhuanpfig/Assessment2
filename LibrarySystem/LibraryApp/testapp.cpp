@@ -81,5 +81,8 @@ int main() {
     b1.returnBook();
     std::cout << "Return b1 done.\n";
 
+    std::cout << "Press Enter to exit...";
+    std::cin.get();
+
     return 0;
 }
