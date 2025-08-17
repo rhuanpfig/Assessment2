@@ -74,9 +74,6 @@ int main() {
     printArray(desc, "After sort (DESC input)");
     printArray(mixed, "After sort (MIXED input)");
 
-
-
-
     // 5) Borrow/Return test
     std::cout << "\n=== Borrow/Return test ===\n";
     std::cout << "Borrow b1: " << (b1.borrowBook() ? "OK" : "FAILED") << "\n";
