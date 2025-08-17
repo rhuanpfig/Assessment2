@@ -1,0 +1,61 @@
+=== Correct Book∆s information ===
+Title: The C Programming Language
+Author: Kernighan & Ritchie
+ISBN: 9780131103627
+Date Added: 2024-01-01
+Status: Available
+Title: Introduction to Algorithms
+Author: Cormen et al.
+ISBN: 9780262033848
+Date Added: 2024-01-01
+Status: Available
+Title: Design Patterns
+Author: Gamma et al.
+ISBN: 9780201633610
+Date Added: 2024-01-01
+Status: Borrowed
+
+=== Incorrect Book∆s information (expected failures) ===
+bad1 failed: Title/Author cannot be empty
+bad2 failed: Title/Author cannot be empty
+bad3 failed: Invalid ISBN format
+
+=== Before sort (ASC input) ===
+9780131103627 | The C Programming Language | Available
+9780201633610 | Design Patterns | Available
+9780262033848 | Introduction to Algorithms | Available
+
+=== Before sort (DESC input) ===
+9780262033848 | Introduction to Algorithms | Available
+9780201633610 | Design Patterns | Available
+9780131103627 | The C Programming Language | Available
+
+=== Before sort (MIXED input) ===
+9780201633610 | Design Patterns | Available
+9780262033848 | Introduction to Algorithms | Available
+9780131103627 | The C Programming Language | Available
+
+=== After sort (ASC input) ===
+9780131103627 | The C Programming Language | Available
+9780201633610 | Design Patterns | Available
+9780262033848 | Introduction to Algorithms | Available
+
+=== After sort (DESC input) ===
+9780262033848 | Introduction to Algorithms | Available
+9780201633610 | Design Patterns | Available
+9780131103627 | The C Programming Language | Available
+
+=== After sort (MIXED input) ===
+9780131103627 | The C Programming Language | Available
+9780201633610 | Design Patterns | Available
+9780262033848 | Introduction to Algorithms | Available
+
+=== Borrow/Return test ===
+Borrow b1: Book borrowed successfully.
+OK
+Borrow b1 again: Sorry, book already borrowed.
+FAILED (expected)
+Return b1 done.
+
+C:\Users\rhuan\source\repos\Assessment2\LibrarySystem\x64\Debug\LibraryApp.exe (process 2684) exited with code 0 (0x0).
+Press any key to close this window . . .
